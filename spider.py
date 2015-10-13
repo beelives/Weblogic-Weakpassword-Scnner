@@ -5,7 +5,7 @@ import threading
 def check(i):
 	try:
 		r = requests.get(i+'/login/LoginForm.jsp',timeout=10)
-		status=r.content.count('WebLogic')
+		status=r.content.count('WebLogic')  #content.count('WebLogic')查找指定关键字
 	except:
 		print i,'Timeout'
 		status = 0
